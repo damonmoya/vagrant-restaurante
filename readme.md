@@ -6,7 +6,7 @@ PASOS DE INSTALACIÓN
 
 3. Comprobar que Vagrant se ha instalado correctamente (vagrant -v)
 
-4. Clonar este repositorio en un directorio del equipo a elección 
+4. Clonar este repositorio en un directorio del equipo a elección. Crear el subdirectorio "vagrant_data"
 
 5. En la terminal, cambiarse al directorio e instalar el plugin de las Guest Additions (vagrant plugin install vagrant-vbguest)
 
