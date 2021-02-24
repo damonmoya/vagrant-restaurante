@@ -1,1 +1,6 @@
 .vagrant
+/vagrant_data/proyecto_restaurante/*
+#!/vagrant_data/proyecto_restaurante/Dockerfile
+#!/vagrant_data/proyecto_restaurante/Gemfile*
+#!/vagrant_data/proyecto_restaurante/entrypoint.sh
+#!/vagrant_data/proyecto_restaurante/docker-compose.yml

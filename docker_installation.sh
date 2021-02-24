@@ -1,3 +1,4 @@
+# Instalando Docker y Docker Compose
 sudo apt-get -y update
 sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -12,6 +13,5 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.28.4/docker-
 	-o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-sudo docker version
-docker-compose --version
-sudo docker run hello-world
+sudo usermod -aG docker $USER
+#docker run hello-world
