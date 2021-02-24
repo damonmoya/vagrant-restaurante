@@ -14,4 +14,12 @@
 
 7. En el mismo directorio, instalar el plugin para recargar la MV durante el aprovisionamiento (vagrant plugin install vagrant-reload)
 
-8. Por último, comenzar con la instalación de la MV (vagrant up) y esperar a que finalice. El último comando en ejecutarse pondrá en marcha el servidor. Acceder a la dirección http://localhost:3000 en el navegador del equipo anfitrión.
+8. Por último, comenzar con la instalación de la MV (vagrant up) y esperar a que finalice. 
+
+9. Para arrancar el servidor, acceder a la máquina virtual (vagrant ssh) y poner en marcha el contenedor:
+
+    - cd /vagrant_data/proyecto_restaurante/
+
+    - docker-compose up
+
+10. En el equipo anfitrión, acceder al navegador e ingresar al dirección http://localhost:3000 para ver el sitio en funcionamiento.

@@ -13,4 +13,4 @@ docker-compose build
 
 cp /docker_files/database.yml /vagrant_data/proyecto_restaurante/config/database.yml
 docker-compose run web rake db:create
-docker-compose up
+# docker-compose up
