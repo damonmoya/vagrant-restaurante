@@ -4,9 +4,9 @@
 
 2. Instalar Vagrant (2.2.14) -> https://www.vagrantup.com/downloads
 
-3. Comprobar que Vagrant se ha instalado correctamente (vagrant -v)
+3. Comprobar que Vagrant se ha instalado correctamente (ejecutar en la terminal: vagrant -v)
 
-4. Clonar este repositorio en un directorio del equipo a elección. Crear el subdirectorio "vagrant_data"
+4. Clonar este repositorio en un directorio del equipo a elección. Crear los subdirectorios "vagrant_data" y "vagrant_data/proyecto_restaurante".
 
 5. En la terminal, cambiarse al directorio e instalar el plugin de las Guest Additions de VirtualBox (vagrant plugin install vagrant-vbguest)
 
