@@ -1,16 +1,13 @@
 # Instalando aplicación RoR
-cd /vagrant_data/proyecto_restaurante/
-rm -rf * 
-rm -rf .git
-cp /docker_files/* /vagrant_data/proyecto_restaurante/
-touch /vagrant_data/proyecto_restaurante/Gemfile.lock
+rm -rf /vagrant/proyecto_restaurante/
+[ -d /vagrant/proyecto_restaurante/ ] || mkdir /vagrant/proyecto_restaurante/
+cd /vagrant/proyecto_restaurante/
+cp /vagrant/docker_files/docker-compose.yml /vagrant/proyecto_restaurante/docker-compose.yml
 
 echo -e "\nInstalando app...\n\n"
-
-docker-compose run --no-deps web rails new . --force --database=postgresql
+rails new /vagrant/proyecto_restaurante --force --database=postgresql
 sudo chown -R $USER:$USER .
 docker-compose build
-
-cp /docker_files/database.yml /vagrant_data/proyecto_restaurante/config/database.yml
-docker-compose run web rake db:create
-# docker-compose up
+cp /vagrant/docker_files/database.yml /vagrant/proyecto_restaurante/config/database.yml
+docker-compose up -d
+bundle exec rake db:create

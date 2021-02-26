@@ -1,25 +1,41 @@
-# PASOS DE INSTALACIÓN
+## PRERREQUISITOS
 
-1. Instalar VirtualBox (6.1) -> https://www.virtualbox.org/wiki/Downloads
+***
 
-2. Instalar Vagrant (2.2.14) -> https://www.vagrantup.com/downloads
+**1.** [Instalar VirtualBox](https://www.virtualbox.org/wiki/Downloads) (6.1)
 
-3. Comprobar que Vagrant se ha instalado correctamente (ejecutar en la terminal: vagrant -v)
+**2.** [Instalar Vagrant](https://www.vagrantup.com/downloads) (2.2.14)
 
-4. Clonar este repositorio en un directorio del equipo a elección. Crear los subdirectorios "vagrant_data" y "vagrant_data/proyecto_restaurante".
+**3.** Comprobar que Vagrant se ha instalado correctamente. Ejecutar en la terminal:
 
-5. En la terminal, cambiarse al directorio e instalar el plugin de las Guest Additions de VirtualBox (vagrant plugin install vagrant-vbguest)
+```
+$ vagrant -v
+```
 
-6. En el mismo directorio, instalar el plugin para Docker Compose (vagrant plugin install vagrant-docker-compose)
+**4.** Clonar este repositorio en un directorio del equipo a elección.
 
-7. En el mismo directorio, instalar el plugin para recargar la MV durante el aprovisionamiento (vagrant plugin install vagrant-reload)
+**5.** En la misma terminal, cambiarse al directorio donde se ha clonado el repositorio e instalar los plugins necesarios de las Guest Additions de VirtualBox 
 
-8. Por último, comenzar con la instalación de la MV (vagrant up) y esperar a que finalice. 
+```
+<!--- Plugin Guest Additions de VirtualBox --->
+$ vagrant plugin install vagrant-vbguest
 
-9. Para arrancar el servidor, acceder a la máquina virtual (vagrant ssh) y poner en marcha el contenedor:
+<!--- Plugin Recarga de MV durante aprovisionamiento --->
+$ vagrant plugin install vagrant-reload
+```
+ 
+**6.** Por último, comenzar con la instalación de la MV y esperar a que finalice: 
 
-    - cd /vagrant_data/proyecto_restaurante/
+```
+$ vagrant up
+```
 
-    - docker-compose up
+**7.** Para arrancar/apagar el servidor, podemos ejecutar en la MV los siguientes comandos personalizados:
 
-10. En el equipo anfitrión, acceder al navegador e ingresar al dirección http://localhost:3000 para ver el sitio en funcionamiento.
+```
+$ rails_on
+
+$ rails_off
+```
+
+**8.** En el equipo anfitrión, acceder al navegador e ingresar al dirección http://localhost:3000 para ver el sitio en funcionamiento.
