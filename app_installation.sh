@@ -10,4 +10,7 @@ sudo chown -R $USER:$USER .
 docker-compose build
 cp /vagrant/docker_files/database.yml /vagrant/proyecto_restaurante/config/database.yml
 docker-compose up -d
-bundle exec rake db:create
+bundle exec rake db:create db:migrate
+rails generate model user username:string{30}:uniq password:string
+bundle exec rake db:migrate
+rails generate controller user

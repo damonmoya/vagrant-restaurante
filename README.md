@@ -30,7 +30,13 @@ $ vagrant plugin install vagrant-reload
 $ vagrant up
 ```
 
-**7.** Para arrancar/apagar el servidor, podemos ejecutar en la MV los siguientes comandos personalizados:
+Para acceder a la MV:
+
+```
+$ vagrant ssh
+```
+
+**7.** Para arrancar/apagar el servidor, podemos ejecutar en la MV los siguientes comandos personalizados dentro de la máquina virtual:
 
 ```
 $ rails_on
