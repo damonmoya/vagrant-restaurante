@@ -4,7 +4,7 @@ apt-get -y install --install-recommends linux-generic-lts-xenial
 sudo apt-get -y update
 sudo apt-get -y install -y autoconf automake bison libc6-dev build-essential curl g++ gcc git libffi-dev libgconf-2-4 libgdbm-dev \
 		libncurses5-dev libreadline-dev libreadline-dev libsqlite3-dev libtool libssl-dev libxi6 \
-		libyaml-dev make pkg-config sqlite3 xvfb zip zlib1g-dev libgmp-dev libpq-dev
+		libyaml-dev make pkg-config sqlite3 xvfb zip zlib1g-dev libgmp-dev libpq-dev dos2unix
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get -y install -y nodejs
 sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -52,3 +52,4 @@ cd ~/bin
 cp /vagrant/docker_files/{rails_on.sh,rails_off.sh} ~/bin
 mv rails_on.sh rails_on | mv rails_off.sh rails_off
 chmod +x ~/bin/*
+dos2unix ~/bin/*

@@ -11,6 +11,6 @@ docker-compose build
 cp /vagrant/docker_files/database.yml /vagrant/proyecto_restaurante/config/database.yml
 docker-compose up -d
 bundle exec rake db:create db:migrate
-rails generate model user username:string{30}:uniq password:string
+rails generate model Article title:string body:text
 bundle exec rake db:migrate
-rails generate controller user
+rails generate controller articles
