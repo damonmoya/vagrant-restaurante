@@ -18,6 +18,7 @@ rvm fix-permissions user -
 rvm install ruby-2.6.5
 rvm --default use ruby-2.6.5
 gem install rails --version=6.0.1
+gem install factory_bot_rails
 sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get -y update
