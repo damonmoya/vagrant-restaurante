@@ -45,3 +45,4 @@ docker-compose build
 docker-compose up -d
 bundle exec rake db:create db:migrate
 rspec
+docker-compose down
