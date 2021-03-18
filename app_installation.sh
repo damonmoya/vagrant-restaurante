@@ -36,13 +36,16 @@
 #echo -e "    expect(rendered).to have_content 'Hello, world!'\n  end\nend" >> ./spec/views/hello_world/index.html.erb_spec.rb
 
 ########################
-
-cd /vagrant/proyecto_restaurante/
 echo -e "\nInstalando app...\n\n"
+[ -d /vagrant/prueba-rails-restaurante/ ] && rm -rf /vagrant/prueba-rails-restaurante/
+cd /vagrant/
+git clone https://github.com/damonmoya/prueba-rails-restaurante.git
+cd /vagrant/prueba-rails-restaurante/
 sudo chown -R $USER:$USER .
 bundle install
 docker-compose build
 docker-compose up -d
+yarn install --check-files
 bundle exec rake db:create db:migrate
 rspec
 docker-compose down
