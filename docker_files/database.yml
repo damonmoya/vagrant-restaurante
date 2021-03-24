@@ -8,9 +8,9 @@ default: &default
 
 development:
   <<: *default
-  database: proyecto_restaurante_development
+  database: proyecto-rails-restaurante_development
 
 
 test:
   <<: *default
-  database: proyecto_restaurante_test
+  database: proyecto-rails-restaurante_test

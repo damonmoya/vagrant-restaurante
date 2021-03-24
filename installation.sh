@@ -1,12 +1,13 @@
 # Instalando Ruby on Rails
 sudo apt-get -y update
-apt-get -y install --install-recommends linux-generic-lts-xenial
+# sudo apt-get -y install --install-recommends linux-generic-lts-xenial
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 1655A0AB68576280
 sudo apt-get -y update
 sudo apt-get -y install autoconf automake bison libc6-dev build-essential curl g++ gcc git libffi-dev libgconf-2-4 libgdbm-dev \
 		libncurses5-dev libreadline-dev libreadline-dev libsqlite3-dev libtool libssl-dev libxi6 \
 		libyaml-dev make pkg-config sqlite3 xvfb zip zlib1g-dev libgmp-dev libpq-dev dos2unix
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get -y install -y nodejs
+sudo apt-get -y install nodejs
 sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt -y update && sudo apt install -y yarn
