@@ -55,7 +55,17 @@ sudo apt-get -y install heroku
 echo 'export PATH=$PATH:~/bin' >> .bashrc
 mkdir ~/bin 
 cd ~/bin 
-cp /vagrant/docker_files/{rails_on.sh,rails_off.sh} ~/bin
-mv rails_on.sh rails_on | mv rails_off.sh rails_off
+
+echo "#!/bin/bash" > ./rails_on
+echo "cd /vagrant/proyecto-rails-restaurante/" >> ./rails_on
+echo "docker-compose up -d" >> ./rails_on
+echo "bundle exec rails db:migrate:reset" >> ./rails_on
+echo "bundle exec rails s -d -p 3000 -b '0.0.0.0'" >> ./rails_on
+
+echo "#!/bin/bash" > ./rails_off
+echo "cd /vagrant/proyecto-rails-restaurante/" >> ./rails_off
+echo 'sudo kill $(cat /vagrant/proyecto-rails-restaurante/tmp/pids/server.pid)' >> ./rails_off
+echo "docker-compose down" >> ./rails_off
+
 chmod +x ~/bin/*
 dos2unix ~/bin/*

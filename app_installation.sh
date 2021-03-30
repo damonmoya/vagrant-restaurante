@@ -44,7 +44,8 @@
 
 ########################
 echo -e "\nInstalando app...\n\n"
-[ -d /vagrant/proyecto-rails-restaurante/ ] && rm -rf /vagrant/proyecto-rails-restaurante/
+[ -d /vagrant/proyecto-rails-restaurante/ ] && \ 
+    chmod -R +w ./proyecto-rails-restaurante/.git/* || rm -rf /vagrant/proyecto-rails-restaurante/
 cd /vagrant/
 git clone https://github.com/damonmoya/proyecto-rails-restaurante.git
 cd /vagrant/proyecto-rails-restaurante/
